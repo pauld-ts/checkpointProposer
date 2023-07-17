@@ -50,7 +50,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	ticker := time.NewTicker(time.Duration(i) * time.Second)
+	ticker := time.NewTicker(time.Duration(i) * time.Minute)
 
 	if os.Getenv("LOGFILE") == "true" {
 		f, err := os.OpenFile("proposer.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
